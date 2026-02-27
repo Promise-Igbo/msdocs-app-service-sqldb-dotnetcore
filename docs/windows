@@ -1,0 +1,5 @@
+To run on windows appservice.
+
+These are some of the changes you should make (although the started pipeline i have here is for windows app service deployment).
+  1. Change the name of the db connection on the environment variable of the app service from AZURE_SQL_CONNECTIONSTRING to ConnectionStrings__AZURE_SQL_CONNECTIONSTRING
+  2. Run migraion bundle of the db on the appservice as ./migrationsbundle.exe rather than ./migrationsbundle -- --environment Production.
